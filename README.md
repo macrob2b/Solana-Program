@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Installation](#installation)
-- [Cost and Income management](#Cost and Income management)
+- [Cost and Income management](#cost-income-management)
 
 
 ## Installation
