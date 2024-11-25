@@ -13,3 +13,11 @@
 1. All Incomes are deposited into Liquidity Pool such income from contract and ... to help grow the token price
 2. All Costs are payed from liquidy pool (such developing, server maintenance and ...)  
 3. Incomes and costs will be transparently and online available to all token holders (From a URL address every holder can see that)
+
+## Tokenomic chart
+
+![Tokenomic chart](images/tokenomic.png)
+
+This chart illustrates the MB2B Tokenomic.
+
+For more information, [click here](https://macrob2b.com).
