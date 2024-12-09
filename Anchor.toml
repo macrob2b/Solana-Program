@@ -5,13 +5,13 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-macrob2b_token = "Hs5A3fAN5GpEVpHPSZtmAix8RPf171Ry89EQQkVtoVwP"
+macrob2b_program = "BFQBgQicbMZUvgbC6AkLQoevG8QYR7ryf42EpDTCMcko"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "Devnet"
 wallet = "wallet-id.json"
 
 [scripts]
