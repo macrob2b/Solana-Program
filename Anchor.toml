@@ -5,7 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-macrob2b_program = "BFQBgQicbMZUvgbC6AkLQoevG8QYR7ryf42EpDTCMcko"
+macrob2b_program = "EUodMYMz5EEq5DAgSTWEqKzYQgiZRFHkZEre6SFByf9N"
 
 [registry]
 url = "https://api.apr.dev"
