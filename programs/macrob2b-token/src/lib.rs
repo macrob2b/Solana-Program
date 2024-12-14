@@ -22,4 +22,8 @@ pub mod macrob2b_program {
     pub fn delete_proposal(ctx: Context<DeleteProposal>) -> Result<()> {
         proccess_delete_proposal(ctx)
     }
+
+    pub fn vote(ctx: Context<Vote>, agree: bool) -> Result<()> {
+        proccess_vote(ctx, agree)
+    }
 }

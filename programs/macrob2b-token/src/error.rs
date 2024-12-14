@@ -4,4 +4,7 @@ use anchor_lang::prelude::*;
 pub enum ErrorCode {
     #[msg("Unauthorized to Action")]
     Unauthorized,
+
+    #[msg("Already voted!")]
+    AlreadyVoted,
 }
