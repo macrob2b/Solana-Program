@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("BFQBgQicbMZUvgbC6AkLQoevG8QYR7ryf42EpDTCMcko");
+declare_id!("EUodMYMz5EEq5DAgSTWEqKzYQgiZRFHkZEre6SFByf9N");
 
 use instructions::*;
 mod error;
@@ -15,8 +15,11 @@ pub mod macrob2b_program {
         ctx: Context<SubmitProposal>,
         title: String,
         brief: String,
+        cate: String,
+        reference: String,
+        amount: u64,
     ) -> Result<()> {
-        proccess_create_proposal(ctx, title, brief)
+        proccess_create_proposal(ctx, title, brief, cate, reference, amount)
     }
 
     pub fn delete_proposal(ctx: Context<DeleteProposal>) -> Result<()> {

@@ -16,11 +16,21 @@ pub fn proccess_create_proposal(
     ctx: Context<SubmitProposal>,
     title: String,
     brief: String,
+    cate: String,
+    reference: String,
+    amount: u64,
 ) -> Result<()> {
     let proposal = &mut ctx.accounts.proposal;
     proposal.owner = ctx.accounts.user.key();
     proposal.title = title;
     proposal.brief = brief;
+    proposal.cate = cate;
+    proposal.reference = reference;
+    proposal.amount = amount;
+
+    proposal.created_at = Clock::get()?.unix_timestamp;
+    proposal.expires_at = proposal.created_at + 3600 * 24 * 7;
+
     Ok(())
 }
 

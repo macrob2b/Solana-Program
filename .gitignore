@@ -8,3 +8,4 @@ test-ledger
 .yarn
 wallet-id.json
 recover.json
+my-wallet.json
