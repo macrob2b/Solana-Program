@@ -22,20 +22,27 @@ pub struct Vote<'info> {
     pub system_program: Program<'info, System>, // Solana system program
 }
 
-pub fn proccess_vote(ctx: Context<Vote>, agree: bool) -> Result<()> {
+pub fn proccess_vote(ctx: Context<Vote>, agree: bool, vote_power: u64) -> Result<()> {
     let proposal = &mut ctx.accounts.proposal;
     let vote_record = &mut ctx.accounts.vote_record;
+
+    let current_time = Clock::get()?.unix_timestamp;
+    require!(
+        proposal.expires_at >= current_time,
+        ErrorCode::ExpiredProposal
+    );
 
     // Prevent double voting
     require!(!vote_record.has_voted, ErrorCode::AlreadyVoted);
     vote_record.has_voted = true;
 
     // Count the vote
+    vote_record.vote_power = vote_power;
     if agree {
-        proposal.agree_votes += 1;
+        proposal.agree_votes += vote_power;
         vote_record.vote = "agree".to_string();
     } else {
-        proposal.disagree_votes += 1;
+        proposal.disagree_votes += vote_power;
         vote_record.vote = "disagree".to_string();
     }
 

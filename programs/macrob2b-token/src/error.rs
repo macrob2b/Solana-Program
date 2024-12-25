@@ -7,4 +7,7 @@ pub enum ErrorCode {
 
     #[msg("Already voted!")]
     AlreadyVoted,
+
+    #[msg("The Proposal Has Already Expired")]
+    ExpiredProposal,
 }

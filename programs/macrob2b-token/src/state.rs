@@ -19,4 +19,5 @@ pub struct VoteRecord {
     pub voter: Pubkey,       // Voter's public key
     pub has_voted: bool,     // Prevent double voting
     pub vote: String,
+    pub vote_power: u64,
 }
